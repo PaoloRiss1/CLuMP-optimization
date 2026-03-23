@@ -352,9 +352,9 @@ int main(int argc, char *argv[]) {
     
     MAXFRUS = argv[1];
     beta  = (double)atof(argv[2]);
-    MAXMEAS = (int)atof(argv[3]);
+    MAXMEAS = (int)atoi(argv[3]);
     MAXITERS = 1 << MAXMEAS;
-    MAXRUNS = (int)atof(argv[4]);
+    MAXRUNS = (int)atoi(argv[4]);
     infile = argv[5];
 
     //Initalize variables

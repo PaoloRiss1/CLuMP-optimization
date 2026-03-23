@@ -1,6 +1,3 @@
-//Copyright (c) 2026 Paolo Rissone and Federico Ricci-Tersenghi
-
-
 //Find external boundary nodes
 void BoundaryNodes(struct var *graph, int *sizeB, int sizeS){
     double edgesC = 0.;
@@ -207,12 +204,12 @@ void EraseCluster(struct var *graph){
 
 
 //Print cluster configuration
-void printCluster(struct var *graph){
+void printCluster(struct var *graph, FILE *output){
     struct var *pv;
     for(int i=0; i<N; i++){
         pv = graph + i;
         for(int j=0; j<pv->deg; j++){
-            fprintf(stdout, "%5d\t%5d\t%8.5f\t%2d\t%2d\n", pv->ID, pv->edges[j], pv->J[j], pv->isActive, pv->isBoundary);
+            fprintf(output, "%5d\t%5d\t%8.5f\t%2d\t%2d\n", pv->ID, pv->edges[j], pv->J[j], pv->isActive, pv->isBoundary);
         }
     }
 }
