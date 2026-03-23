@@ -239,15 +239,6 @@ double Energy(void){
     return E;
 }
 
-//double UpdateEnergy(int i, double E) {
-//    int s;
-//    for(int j=0; j<v[i].deg; j++){
-//        s = v[i].edges[j];
-//        E += 2. * (-v[i].spin) * v[s].spin * v[i].J[j]; //Note the inversion of spin i to update the energy
-//    }
-//    return E;
-//}
-
 double dEnergy(int i) {
     int s;
     double dE = 0.;
@@ -273,24 +264,6 @@ void MCstep(double beta) {
         }
     }
 }
-
-////MC step
-//void MCstepRAN(int num, double T) {
-//    
-//    int index, ID;
-//    double dE;
-//    
-//    while (num) {
-//        index = (int)(FRANDOM * num);
-//        ID = list[index];
-//        list[index] = list[--num];
-//        list[num] = ID;
-//    
-//        dE = dEnergy(ID);
-//        if (dE <= 0.0 || dE <= - 0.5 * T * log(FRANDOM)) v[ID].spin = -v[ID].spin;
-//    }
-//}
-
 
 
 //**********************************************************************************//
@@ -367,16 +340,6 @@ int main(int argc, char *argv[]) {
             }
             iter++;
         }
-        
-//        int count=0;
-//        for(int i=0; i<N; i++){
-//            if( v[i].flip==0 ){
-//                fprintf(stderr,"%i %i\n", i, v[i].flip);
-//                count++;
-//            }
-//        }
-//        fprintf(stderr,"Tot unflipped spins: %i\n", count);
-//        
         
         run++;
     }

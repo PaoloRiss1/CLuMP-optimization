@@ -9,14 +9,11 @@ void initMessages(int *spins){
     for(i = 0; i < sizeS; i++){
         pv = v + S[i];
         pv->field = 0.0;
-//        pv->field = SMALL * gaussRan();
         for (j = 0; j < pv->deg; j++){
             pv->m[j] = 0.0;
-//            pv->m[j] = - 1. + 2. * gaussRan();
             s = pv->edges[j];
             if ( v[s].isBoundary ) {
                 if ( fabs(pv->J[j]) == 1. ){
-                    //                *(pv->pm[j]) = spins[s] + SMALL * gaussRan();
                     *(pv->pm[j]) = spins[s] * fabs(pv->J[j]) * ( 1. - SMALL * FRANDOM );
                 }
                 else

@@ -277,11 +277,6 @@ double UpdateEnergy(int i, double E) {
     return E;
 }
 
-//double UpdateEnergy(int i, double E) {
-//    E -= 2. * v[i].fitness;
-//    return E;
-//}
-
 
 //--------------------- Select rank ------------------------
 
@@ -305,7 +300,6 @@ void initRank(void){
     for(k=1; k<=N; k++){
         sum += pdf[k-1];
         cumulant[k-1] = sum / norm;
-//        fprintf(stderr, "%i\t%f\t%f\n", k, pdf[k-1], cumulant[k-1]);
     }
 }
 
@@ -397,25 +391,9 @@ int main(int argc, char *argv[]) {
     initRandom();
     importGraph(input);
     
-    
-    
     //Compute average connectivity
     for(int i=0; i<N; i++) C += v[i].deg;
 
-
-//    //Check for external field    
-//    double h=0.;
-//    if (v[0].deg == N - 1 - C/N ){
-//        for(int i=0; i<N; i++){
-//            h += v[0].J[i];
-//        }
-//        h /= N;
-//        fprintf(stderr, "Average external field h = %.5f\n\n", h);
-//    }else{
-//        fprintf(stderr, "No external field\n\n");
-//    }
-    
-    
     //----------------------------- EO ----------------------------------
         
     InitGraph(bestv, v);

@@ -22,13 +22,16 @@ else
 endif
 
 # ── Targets ──────────────────────────────────────────────────────────────────
-TARGETS = GraphGenerator CLuMP RCLuMP SimulatedAnnealing PopulationAnnealing ExtremalOpt
+TARGETS = GraphGenerator GetCluster CLuMP RCLuMP SimulatedAnnealing PopulationAnnealing ExtremalOpt
 
 .PHONY: all clean
 
 all: $(TARGETS)
 
 GraphGenerator: GraphGenerator.c
+	$(CC) $(CFLAGS) -o $@ $< $(LIBS)
+
+GetCluster: GetCluster.c
 	$(CC) $(CFLAGS) -o $@ $< $(LIBS)
 
 CLuMP: CLuMP.c

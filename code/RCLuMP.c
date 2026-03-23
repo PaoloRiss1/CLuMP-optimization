@@ -452,7 +452,6 @@ int main(int argc, char *argv[]) {
             //Spin initialization
             population[r].spins = (int *)calloc(N, sizeof(int));
             initSpins(population[r].spins);
-//            population[r].F = InitFrustration(population[r].spins, v);
             
             //Monte Carlo initialization (stops when gets to a min)
             Enext = Energy(population[r].spins);

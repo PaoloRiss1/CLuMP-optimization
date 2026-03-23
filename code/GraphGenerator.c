@@ -163,10 +163,7 @@ int main(int argc, char *argv[]) {
     
     fprintf(fout, "#Vertices:\tBonds:\n");
     fprintf(fout, "#\t%i\t\t%i\n", N, M);
-    
     printGraphEdges(graph, fout);
-//    printGraphNodes(graph, stderr);
-//    graphINFO(graph);
 
     fclose(fout);
     return 0;
