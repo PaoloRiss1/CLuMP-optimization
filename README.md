@@ -32,7 +32,7 @@ CLuMP is a novel message-passing-based optimization algorithm designed for spin-
 └── code/
     ├── Makefile                  # Build all main binaries with a single command
     ├── GraphGenerator.c          # Generate random regular graphs (RRG) and 2D/3D lattices
-    ├── GetCluster.c              # Generate clusters at controlled frustration (standalone, not in Makefile)
+    ├── GetCluster.c              # Generate clusters at controlled frustration
     ├── CLuMP.c                   # CLuMP optimization algorithm
     ├── RCLuMP.c                  # Population-based variant of CLuMP (R-CLuMP)
     ├── SimulatedAnnealing.c      # Simulated Annealing baseline
