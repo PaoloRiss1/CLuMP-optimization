@@ -215,7 +215,7 @@ python3 ResultsAnalysis.py [OUTPUT] [tolerance] [data_file(s)]
 
 | Parameter | Description |
 |-----------|-------------|
-| `MAXFRUS` | Maximum frustration threshold. Use `AUTO` to target a 50% BP convergence rate |
+| `MAXFRUS` | Maximum frustration threshold |
 | `seed` | *(Optional)* Fixed seed for the random number generator |
 | `graph.conf` | Input graph file |
 
@@ -257,15 +257,15 @@ python3 ResultsAnalysis.py FULL 0 \
     data/results/[graph]/[id]/*.taueo
 ```
 
-| Figure | Data folder | Graph type | Notes |
-|--------|-------------|------------|-------|
-| Fig. 1 (main) | `data/tests/` | `LRG_2D_N256` | Cluster size vs. frustration |
-| Fig. 2 (main) | `data/tests/` | All graphs with Gaussian J, except `LRG_2D_N256` | Cluster size scaling with max-frustration |
-| Fig. 3 (main) | `data/results/` | `LRG_2D`, `LRG_3D`, `RRG_C10` | Algorithm comparison — energy vs. time and other stats |
-| Fig. 4 (main) | `data/results/` | `LRG_2D`, `LRG_3D`, `RRG_C10` | Collective moves analysis — energy vs. flipped spins |
-| Supp. Fig. S1 | `data/tests/` | `LRG_2D_N1024` | Extended SA and PA comparison |
-| Supp. Fig. S2 | `data/results/` | `RRG_C4` | Extended algorithm comparison |
-| Supp. Fig. S3 | `data/results/` | `RRG_C4`, `RRG_C10` (J = ±1) | Extended comparison with integer couplings |
+| Figure | Data folder | Graph(s) | Code | Notes |
+|--------|-------------|----------|------|-------|
+| Fig. 1 (main) | `data/tests/` | `LRG_2D_N256` | GetCluster.c (fixed seed) & PlotCluster.py | Cluster size vs. frustration |
+| Fig. 2 (main) | `data/tests/` | All graphs with Gaussian J, except `LRG_2D_N256` | ResultsAnalysis.py | Cluster size scaling with max-frustration |
+| Fig. 3 (main) | `data/results/` | `LRG_2D`, `LRG_3D`, `RRG_C10` | ResultsAnalysis.py | Algorithm comparison — energy vs. time and other stats |
+| Fig. 4 (main) | `data/results/` | `LRG_2D`, `LRG_3D`, `RRG_C10` | ResultsAnalysis.py | Collective moves analysis — energy vs. flipped spins |
+| Supp. Fig. S1 | `data/tests/` | `LRG_2D_N1024` | ResultsAnalysis.py | Extended SA and PA comparison |
+| Supp. Fig. S2 | `data/results/` | `RRG_C4` | ResultsAnalysis.py | Extended algorithm comparison |
+| Supp. Fig. S3 | `data/results/` | `RRG_C4`, `RRG_C10` (J = ±1) | ResultsAnalysis.py | Extended comparison with integer couplings |
 
 ---
 
