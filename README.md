@@ -270,7 +270,7 @@ The exact algorithm parameters used for each graph family and produce each figur
 data/results/[graph]/[graph_id]_ALGOspecs.dat
 ```
 
-> **Note:** To reproduce figures using the published data, download the full [Zenodo data archive](https://doi.org/10.5281/zenodo.19048237) first and then jump to **step #3** of the quick-start workflow above.
+> **Note:** To reproduce the figures using the published data, download the full [Zenodo data archive](https://doi.org/10.5281/zenodo.19048237) first and then jump to **step #3** of the quick-start workflow above.
 
 It follows a summary of data source and code to reproduce each figure:
 
