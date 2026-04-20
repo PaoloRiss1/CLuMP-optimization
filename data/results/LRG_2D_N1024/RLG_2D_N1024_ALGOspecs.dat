@@ -1,0 +1,9 @@
+# Algo   |   Specs
+# ─────────────────────────────────────────────────────
+    EO   |   log2_iters = 28,  RUN = 10
+   τEO*  |   τ = 1.50, log2_iters = 33,  RUN = 10
+    SA   |   betaf = 10.,  log2_iters = 18,  RUN = 100
+ CLuMP   |   MAXFRUS = 25,  beta = 0,  log2_iters = 12,  RUN = 100
+RCLuMP   |   MAXFRUS = 25,  R = 10,   log2_iters = 14,  RUN = 100
+
+* NOTE: τEO results have been prpvided by Prof. Stefan Boettcher (see the enclosed README file for further info)
